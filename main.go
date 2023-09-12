@@ -134,7 +134,7 @@ func doUpdate(logger *logrus.Logger, url string) error {
 }
 
 func main() {
-	baseURL := "https://raw.githubusercontent.com/luan/tibia-client/main/"
+	baseURL := "https://raw.githubusercontent.com/sebbesiren/mehra-tibia-ot-client/main/"
 	executable, err := os.Executable()
 	if err != nil {
 		fmt.Printf("Failed to get executable path: %v", err)
