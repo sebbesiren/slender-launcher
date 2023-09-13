@@ -508,9 +508,9 @@ func (a *App) Play(local bool) {
 	}
 	a.logger.Infof("Launching %s", executable)
 	os.Chmod(a.executable(), 0755)
-	if err := syscall.Exec(executable, []string{"--battleeye"}, os.Environ()); err != nil {
+	if err := syscall.Exec(executable, []string{"--battleye"}, os.Environ()); err != nil {
 		a.logger.Errorf("Failed to launch %s: %s | attempting regular fork", executable, err)
-		cmd := exec.Command(executable, "--battleeye")
+		cmd := exec.Command(executable, "--battleye")
 		cmd.Stdout = os.Stdout
 		cmd.Stderr = os.Stderr
 		cmd.Env = os.Environ()
